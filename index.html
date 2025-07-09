@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Clicker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <!-- Main section -->
+    <div>
+        <h1 id="header">Fruit Clicker</h1>
+        <h2>Fruits: <span id="fruitCounter">0</span></h2>
+        <img id="strawberry" src="images/rainbowApple-removebg-preview.png" alt="strawberry"><br>
+    </div>
+    
+    <!-- Section for buttons -->
+    <div class="buttons">
+        <button id="saveButton">Save</button>
+        <button id="shopButton">Shop</button>
+    </div>
+
+    <!-- Section just for the shop pop-up -->
+    <div id="shopSection">
+        <h1>Welcome to the shop!</h1>
+        <p>Here are the current upgrades!</p>
+        
+        <!-- Upgrades section -->
+        <div id="upgradeItem">
+            <img class="upgradeImages" src="Images/fruitClicker(1).png" alt="fruitClicker">
+            <p>Fruit Clicker [<span id="fruitClickerCount">0</span>]</p>
+            <button id="buyFruitClicker" class="buyButtons">Buy</button>
+            <p class="costAmt">Cost: <span id="fruitClickerCost">10</span></p>
+        </div>
+
+        <div class="buttons">
+            <button id="closeShop">Close</button>
+        </div>
+    </div>
+
+    <!-- Section just for the save message -->
+    <div id="saveMessage">
+        <h3>Your game has been saved!</h3>
+        <div class="buttons">
+            <button id="closeMessage">Close</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
