@@ -14,12 +14,13 @@
     <div>
         <h1 id="header">Fruit Clicker</h1>
         <h2>Fruits: <span id="fruitCounter">0</span></h2>
-        <img id="strawberry" src="Images/rainbowApple-removebg-preview.png" alt="strawberry"><br>
+        <img id="fruit" src="images/rainbowApple-removebg-preview.png" alt="Rainbow Apple"><br>
     </div>
     
     <!-- Section for buttons -->
     <div class="buttons">
         <button id="saveButton">Save</button>
+        <button id="deleteSaveButton">Delete Save</button>
         <button id="shopButton">Shop</button>
     </div>
 
@@ -28,12 +29,39 @@
         <h1>Welcome to the shop!</h1>
         <p>Here are the current upgrades!</p>
         
-        <!-- Upgrades section -->
-        <div id="upgradeItem">
+        <!-- Dropdown for selecting how much to buy -->
+        <div class="purchaseOptions">
+            <label for="purchaseAmount">Buy:</label>
+            <select id="purchaseAmount">
+                <option value="1">1</option>
+                <option value="10">10</option>
+                <option value="100">100</option>
+                <option value="max">Max</option>
+            </select>
+        </div>
+
+        <!-- The first upgrade -->
+        <div class="upgradeItem">
             <img class="upgradeImages" src="Images/fruitClicker(1).png" alt="fruitClicker">
             <p>Fruit Clicker [<span id="fruitClickerCount">0</span>]</p>
             <button id="buyFruitClicker" class="buyButtons">Buy</button>
             <p class="costAmt">Cost: <span id="fruitClickerCost">10</span></p>
+        </div>
+
+        <!-- The second upgrade -->
+        <div class="upgradeItem" id="bGloveUpgrade">
+            <img class="upgradeImages" src="Images/betterGloves.png" alt="betterGloves">
+            <p>Better Gloves</p>
+            <button id="buyBGloves" class="buyButtons">Buy</button>
+            <p class="costAmt">Cost: <span id="bGloveCost">100</span></p>
+        </div>
+
+        <!-- The third upgrade -->
+        <div class="upgradeItem">
+            <img class="upgradeImages" src="Images/worker.png" alt="workers">
+            <p>Workers [<span id="workerCount">0</span>]</p>
+            <button id="buyWorkers" class="buyButtons">Buy</button>
+            <p class="costAmt">Cost: <span id="workerCost">1000</span></p>
         </div>
 
         <div class="buttons">
@@ -42,14 +70,33 @@
     </div>
 
     <!-- Section just for the save message -->
-    <div id="saveMessage">
+    <div id="saveMessage" class="message">
         <h3>Your game has been saved!</h3>
         <div class="buttons">
             <button id="closeMessage">Close</button>
         </div>
     </div>
 
-    <script src="main.js"></script>
+    <!-- Section for the delete save message -->
+    <div id="deleteSaveMessage" class="message">
+        <h3>Are you sure you want to delete your game save?</h3>
+        <div class="buttons">
+            <button id="deleteConfirm">Delete Save</button>
+        </div>
+        <br><div class="buttons">
+            <button id="deleteReject">No</button>
+        </div>
+    </div>
+
+    <!-- Section after confirming -->
+    <div id="deleteConfirmed" class="message">
+        <h3>Your game save has been deleted.</h3>
+        <div class="buttons">
+            <button id="deleted">Close</button>
+        </div>
+    </div>
+
+    <script src="mainV2.js"></script>
 </body>
 
 </html>
